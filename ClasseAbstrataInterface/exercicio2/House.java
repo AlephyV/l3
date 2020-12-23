@@ -1,11 +1,5 @@
-
-package ex2;
-
-
 public class House extends Building {
-    
-    public House(int numeroPesosas, boolean energiaRenovalvel, int numeroLampadas, boolean usaArCondicionado) {
-        super(numeroPesosas, energiaRenovalvel, numeroLampadas, usaArCondicionado);
+    public House(int quantidade_pessoas, boolean energia_renovavel, int quantidade_lampadas, boolean arCondicionado) {
+        super(quantidade_pessoas, energia_renovavel, quantidade_lampadas, arCondicionado);
     }
-    
 }

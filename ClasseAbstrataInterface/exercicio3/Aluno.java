@@ -1,32 +1,6 @@
-
-package ex3;
-
-
 public class Aluno implements Comparable{
-    private String nome;
     private double nota;
-
-    public Aluno(String nome, double nota) {
-        this.nome = nome;
-        this.nota = nota;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public double getNota() {
-        return nota;
-    }
-
-    public void setNota(double nota) {
-        this.nota = nota;
-    }
-
+    private String nome;
     @Override
     public int compareTo(Object a) {
         Aluno aluno = (Aluno) a;
@@ -37,5 +11,18 @@ public class Aluno implements Comparable{
         } else {
             return 1;
         }
+    }
+    public Aluno(String nome, double nota) {
+        this.nota = nota;
+        this.nome = nome;
+    }
+    public double getNota() {
+        return nota;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public void setNota(double nota) {
+        this.nota = nota;
     }
 }
