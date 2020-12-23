@@ -1,40 +1,28 @@
-
-package q1;
-
-
 public class Circulo implements ObjetoGeometrico {
+    private double pi;
     private double raio;
-    private double PI;
-
-    public Circulo(double raio, double PI) {
+    public Circulo(double raio, double pi) {
+        this.pi = pi;
         this.raio = raio;
-        this.PI = PI;
     }
-
     @Override
     public double calcularArea() {
-        return this.PI * Math.pow(this.raio, 2);
+        return this.pi * Math.pow(this.raio, 2);
     }
-
-    @Override
-    public double calcularPerimetro() {
-        return 2 * this.PI * this.raio;
+    public double getpi() {
+        return pi;
     }
-
+    public void setpi(double pi) {
+        this.pi = pi;
+    }
     public double getRaio() {
         return raio;
     }
-
     public void setRaio(double raio) {
         this.raio = raio;
     }
-
-    public double getPI() {
-        return PI;
+    @Override
+    public double calcularPerimetro() {
+        return 2 * this.pi * this.raio;
     }
-
-    public void setPI(double PI) {
-        this.PI = PI;
-    }
-    
 }

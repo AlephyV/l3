@@ -1,36 +1,27 @@
-
-package q1;
-
 import java.util.Scanner;
-
-
 public class TesteCirculo {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         Circulo circulo = new Circulo(0, 0);
-        
         while (true) {
-            System.out.println( "1. Digitar valor do raio e do PI\n" +
-                                "2. Calcular Área\n" +
+            System.out.println( "1. Digitar valor do raio e do PI\n2. Calcular Área\n" +
                                 "3. Calcular Perímetro\n" +
                                 "0. Sair");
-            int opcao = sc.nextInt();
-            
-            switch(opcao) {
+            int escolha = teclado.nextInt();
+            switch(escolha) {
                 case 1:
-                    System.out.println("Digite o valor do raio: ");
-                    double raio = sc.nextInt();
-                    System.out.println("Digite o valor de PI: ");
-                    double PI = sc.nextInt();
-                    
-                    circulo.setRaio(raio);
+                    System.out.println("valor do raio: ");
+                    double raio = teclado.nextInt();
+                    System.out.println("valor de PI: ");
+                    double PI = teclado.nextInt();
                     circulo.setPI(PI);
+                    circulo.setRaio(raio);
                 break;
                 case 2:
-                    System.out.println("Area: " + circulo.calcularArea());
+                    System.out.println("Área: " + circulo.calcularArea());
                 break;
                 case 3:
-                    System.out.println("Perimetro: " + circulo.calcularPerimetro());
+                    System.out.println("Perímetro: " + circulo.calcularPerimetro());
                 break;
                 default:
                     System.exit(0);
